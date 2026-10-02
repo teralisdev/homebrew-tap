@@ -8,10 +8,13 @@ cask "vitrel" do
   homepage "https://vitrel.app/"
 
   livecheck do
-    url "https://vitrel.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://api.vitrel.app/v1/update.json"
+    strategy :json do |json|
+      JSON.parse(json["payload"].unpack1("m"))["version"]
+    end
   end
 
+  auto_updates true
   depends_on macos: :sequoia
 
   app "Vitrel.app"
