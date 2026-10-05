@@ -1,6 +1,6 @@
 cask "vitrel" do
-  version "0.4.1"
-  sha256 "b73ec76eaf21ea32e7229de2b5cb926a40cdf63b9f293e70f2919aad592c3919"
+  version "0.4.2"
+  sha256 "2b9688c3d2793aaaa26df17f24addc5a1530304bf25203361ffec9e414faa496"
 
   url "https://vitrel.app/download/Vitrel-#{version}.dmg"
   name "Vitrel"
